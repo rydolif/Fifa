@@ -1,0 +1,624 @@
+@import "libs"
+@import "base"
+
+.header
+	position: fixed
+	right: 0
+	left: 0
+	padding: 5px 0
+	transition: all .3s
+	z-index: 1001
+	color: #fff
+
+	&--active
+		background-color: rgba(1, 46, 135, 1)
+		padding: 5px 0
+
+		.header__account
+			&--active
+				background-color: rgba(1, 46, 135, 1)
+
+			&_list--active
+				background-color: rgba(1, 46, 135, 1)
+
+
+	&--menu
+		background-color: rgba(1, 46, 135, 1)
+		padding: 5px 0
+
+		.header__account
+			&--active
+				background-color: rgba(1, 46, 135, 1)
+
+			&_list--active
+				background-color: rgba(1, 46, 135, 1)
+
+
+	&__container
+		position: relative
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+	
+
+	&__logo
+		display: block
+		font-weight: 800
+		text-transform: uppercase
+		color: #fff
+
+		&:hover
+			color: #fff
+
+		img
+			width: 60px
+			height: 60px
+
+	&__account
+		position: relative
+		font-weight: 700
+		cursor: pointer
+		padding: 5px 25px
+		transition: all .3s
+
+		&::before
+			content: ''
+			position: absolute
+			top: 12px
+			right: 5px
+			width: 10px
+			height: 10px
+			border-left: 2px solid #fff
+			border-top: 2px solid #fff
+			transform: rotate(-135deg)
+			transition: all .3s
+
+		&--active
+			&::before
+				top: 8px
+				transform: rotate(45deg)
+
+		&_list
+			position: absolute
+			left: 0
+			width: 100%
+			display: none
+			padding: 0 25px
+
+			&--active
+				display: block
+				
+		a
+			color: #fff
+			&:hover
+				text-decoration: underline
+
+	&__language
+		width: 2%
+
+		a
+			display: block
+			color: #fff
+
+			
+		&_active
+			font-weight: 800
+			color: $accent !important
+
+.nav
+
+	margin: 0 10%
+
+	ul
+		display: flex
+		flex-direction: row
+		justify-content: space-around
+
+	li
+		margin-right: 55px
+
+		&:nth-child(2)
+			font-weight: 800
+
+		&:last-child
+			margin-right: 0
+
+	a
+		position: relative
+		z-index: 1
+		text-transform: uppercase
+		font-size: 14px
+		color: #fff
+		transition: all .3s
+
+		&::before
+			content: ''
+			transform: scale(0)
+			transition: all .3s
+			position: absolute
+			left: 10%
+			right: 10%
+			bottom: -5px
+			width: 80%
+			height: 4px
+			background-color: $accent
+			z-index: -1
+
+		&:hover, &:focus
+			text-decoration: none
+
+			&::before
+				transform: scale(1)
+
+.hero
+	background-image: url(../img/hero-bg.png)
+	background-position: 75% 0
+	background-repeat: no-repeat
+	background-size: cover
+	padding-top: 300px
+	padding-bottom: 430px
+
+	&__block
+		display: flex
+		justify-content: space-around
+
+		&_img
+			position: relative
+			width: 40%
+
+
+		a
+			position: absolute
+			top: 60%
+			right: 0
+			padding: 15px 50px
+			background: $accent
+			line-height: 1
+			text-transform: uppercase
+			color: #fff
+			font-weight: 800
+			font-size: 24px
+			transition: all .3s
+
+			&:hover, &:focus
+				transform: scale(1.03)
+				box-shadow: 0 5px 5px 0 rgba($accent, .4)
+
+.content-one
+	padding-top: 65px
+	padding-bottom: 200px
+
+.info
+	padding: 60px 0 30px
+	background-image: url(../img/info-bg.png)
+
+	&__list
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+
+	&__item
+		width: 20%
+		min-width: 200px
+		text-align: center
+		color: #fff
+		text-transform: uppercase
+		align-items: flex-start
+		margin-bottom: 30px
+		line-height: 1.1
+
+	img
+		margin-bottom: 35px
+		max-height: 45px
+
+.reviews
+	padding-top: 115px
+	padding-bottom: 140px
+
+	.swiper-slide
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	.swiper-container
+		padding-bottom: 125px
+
+	p
+		position: relative
+		width: 100%
+		border: 1px solid #092153
+		border-radius: 20px
+		padding: 30px
+		z-index: 1
+		background: #fff
+
+		&::before
+			content: ''
+			position: absolute
+			left: 75px
+			bottom: -20px
+			border-bottom: 20px solid transparent
+			border-left: 30px solid $text
+			border-right: 20px solid transparent
+			border-top: 20px solid transparent
+			z-index: -1
+
+		&::after
+			content: ''
+			position: absolute
+			left: 75px
+			bottom: -18px
+			border-bottom: 20px solid transparent
+			border-left: 30px solid #fff
+			border-right: 20px solid transparent
+			border-top: 20px solid transparent
+
+	&__icon
+		position: relative
+		background: $text
+		height: 100px
+		width: 100px
+		border-radius: 15px
+
+	img
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		max-width: 90%
+		max-height: 90%
+
+	b
+		text-transform: uppercase
+
+	&__name
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		text-align: right
+		padding-bottom: 10px
+
+	&__wrap
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		width: 105px
+		margin: 0 auto
+
+	.swiper-button-next, 
+	.swiper-button-prev
+		top: -5px
+		width: 12px
+		height: 12px
+		background: none
+		border-left: 3px solid $text
+		border-top: 3px solid $text
+		transform: rotate(-45deg)
+
+	.swiper-button-next
+		transform: rotate(135deg)
+
+.footer
+	background-image: url(../img/footer-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	padding-top: 35px
+	padding-bottom: 50px
+
+	&__up
+		position: relative
+		font-size: 14px
+
+		a
+			&:hover
+				&::after
+					top: -25px
+
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				transition: all .3s
+
+			&::before
+				top: -30px
+				left: -3px
+				background: #fff
+				width: 25px
+				height: 25px
+
+			&::after
+				top: -20px
+				left: 4px
+				width: 10px
+				height: 10px
+				border-top: 3px solid $text
+				border-left: 3px solid $text
+				transform: rotate(45deg)
+
+	.header__logo
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-right: 15%
+
+		div
+			margin-bottom: 10px
+
+	p
+		color: #fff
+		text-transform: uppercase
+		font-size: 14px
+		line-height: 2.5
+		margin-right: 5%
+
+	a
+		color: #fff
+
+	.nav
+		width: 30%
+
+		ul
+			flex-wrap: wrap
+
+		li
+			width: 50%
+			margin-right: 0
+			margin-bottom: 15px
+
+//--------------------------page-----------------------------------
+.page
+
+	.main
+		padding-top: 140px
+		padding-bottom: 95px
+
+	.header
+		background-image: url(../img/header-page.png)
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+
+	h2
+		color: $text
+		text-align: left
+
+	&--form
+		.header
+			background: none
+
+			&--active
+				background-color: rgba(1, 46, 135, .95)
+
+			&--menu
+				background-color: rgba(1, 46, 135, .95)
+
+		.main
+			padding: 200px 0
+			background-image: url(../img/page--form-bg.jpg)
+			background-position: center
+			background-size: cover
+			background-repeat: no-repeat
+
+		.form
+			background-image: url(../img/form.jpg)
+			background-position: center
+			background-size: cover
+			background-repeat: no-repeat
+			border-radius: 20px
+			padding: 50px 70px 90px 70px
+
+			&__block
+				margin-bottom: 20px
+				display: flex
+				justify-content: space-between
+				position: relative
+
+				&--two
+					margin-bottom: 60px
+
+				&--three
+					margin-bottom: 65px
+
+					button:first-child
+						background-color: transparent
+						border: 1px solid #fff
+
+				&:last-child
+					font-size: 14px
+
+				label
+					color: #fff
+					position: relative
+					padding-left: 30px
+					line-height: 1
+					cursor: pointer
+
+					&::before,
+					&::after
+						content: ''
+						position: absolute
+						left: 0
+						top: 0
+
+					&::before
+						width: 15px
+						height: 15px
+						border: 1px solid #fff
+						border-radius: 3px
+
+					&::after
+						width: 11px
+						height: 11px
+						left: 2px
+						top: 2px
+						background-color: #fff
+						border-radius: 3px
+						opacity: 0
+
+				input[type="checkbox"]
+					display: none
+
+				input[type="checkbox"]:checked + label::after
+					opacity: 1
+
+
+				span
+					position: absolute
+					top: 0
+					left: 15px
+					height: 15px
+					width: 10px
+					background-color: $accent
+
+					&::before
+						content: ''
+						position: absolute
+						bottom: 0
+						left: 1px
+						border-bottom: 4px solid #082e70
+						border-left: 4px solid transparent
+						border-right: 4px solid transparent
+						border-top: 4px solid transparent
+
+			a
+				color: #fff
+
+		h2
+			color: #fff
+			text-align: right
+			margin-bottom: 70px
+
+		input
+			background-color: transparent
+			border-color: #fff
+			border-radius: 5px
+			width: 100%
+			font-size: 14px
+			height: 40px
+			line-height: 40px
+			padding: 0 30px
+			color: #fff
+
+			&::placeholder
+				color: #fff
+				line-height: 1
+				font-size: 14px
+	
+	&--sell
+
+		.header__account
+			background-color: rgba(1, 46, 135, 1)
+
+			&_list
+				background-color: rgba(1, 46, 135, 1)
+
+		.main
+			padding-top: 190px
+			padding-bottom: 0
+
+		h2
+			margin-top: 20px
+			margin-bottom: 70px
+
+		&__absolute
+			width: 100%
+
+		.btn--blue
+			background: $text
+
+		.btn--green
+			background: #fff
+			color: #28ab3b
+			border: 2px solid #28ab3b
+
+		&__block
+			display: flex
+			justify-content: space-between
+			margin-bottom: 70px
+
+		&__content
+			margin-bottom: 80px
+
+		&__bottom
+			display: flex
+			justify-content: flex-end
+
+
+.contacts
+
+	.main
+		padding-top: 69px
+		padding-bottom: 0
+
+	&-top
+		padding-top: 90px
+		padding-bottom: 100px
+		background-image: url(../img/contacts-bg.jpg)
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+
+		&__list
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+		&__item
+			position: relative
+			width: 48%
+			padding: 30px 30px 40px 30px
+			color: #fff
+			border: 1px solid #fff
+			border-radius: 7px
+			line-height: 1.2
+
+			a
+				color: #fff
+
+				&:hover
+					text-decoration: underline
+
+			img
+				position: absolute
+				right: 30px
+				top: 50%
+				transform: translate(0, -50%)
+		h2
+			color: #fff
+			margin-bottom: 80px
+	
+	&-center
+		padding-top: 60px
+		padding-bottom: 100px
+
+		h2
+			font-size: 18px
+			color: $text
+			margin-bottom: 40px
+			text-align: right
+
+		input, textarea
+			background: #ebebeb
+			width: 100%
+			border: none
+			padding: 5px 20px
+			font-size: 16px
+			color: $text
+			border-radius: 5px
+
+			&::placeholder
+				color: $text
+				font-size: 12px
+				line-height: 1
+				font-size: 16px
+
+		.form
+			div:last-child
+				display: flex
+				justify-content: flex-end
+
+@import "media" // Always at the end
