@@ -1,9 +1,28 @@
 $(function() {
+//------------------------------profile-----------------------------
+  $('.information__tab').hide();
+  $('.information__tab:first').show();
+  $('.click a').click(function(event){
+    event.preventDefault();
+    $('.information__tab').hide();
+     var selectTab = $(this).attr('href');
+    $(selectTab).fadeIn();
+  })
+
+//------------------------------profiletabs-----------------------------
+  $('.profile__tab').hide();
+  $('.profile__tab:first').show();
+  $('.profile__tab a').click(function(event){
+    event.preventDefault();
+    $('.profile__tab').hide();
+     var selectTab = $(this).attr('href');
+    $(selectTab).fadeIn();
+  })
 
 //------------------------------tabs-----------------------------
-  $('.tabs_').hide();
+  $('.tabs').hide();
   $('.tabs:first').show();
-  $('.tabs a').click(function(event){
+  $('.page--sell__block a').click(function(event){
     event.preventDefault();
     $('.tabs').hide();
      var selectTab = $(this).attr('href');
@@ -42,9 +61,6 @@ $(function() {
     $('nav').toggleClass('nav--active');
     $('header').toggleClass('header--menu');
   });
-
-// //-------------------------------попандер---------------------------------------
-//   $('.modal').popup({transition: 'all 0.3s'});
 
 // //------------------------------------form-------------------------------------------
 //   $('input[type="tel"]').mask('+0 (000) 000-00-00');

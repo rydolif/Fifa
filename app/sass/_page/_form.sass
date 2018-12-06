@@ -1,0 +1,122 @@
+
+.page--form
+	.header
+		background: none
+
+		&--active
+			background-color: rgba(1, 46, 135, .95)
+
+		&--menu
+			background-color: rgba(1, 46, 135, .95)
+
+	.main
+		padding: 200px 0
+		background-image: url(../img/page--form-bg.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+
+	.form
+		background-image: url(../img/form.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		border-radius: 20px
+		padding: 50px 70px 90px 70px
+
+		&__block
+			margin-bottom: 20px
+			display: flex
+			justify-content: space-between
+			position: relative
+
+			&--two
+				margin-bottom: 60px
+
+			&--three
+				margin-bottom: 65px
+
+				button:first-child
+					background-color: transparent
+					border: 1px solid #fff
+
+			&:last-child
+				font-size: 14px
+
+			label
+				color: #fff
+				position: relative
+				padding-left: 30px
+				line-height: 1
+				cursor: pointer
+
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					top: 0
+
+				&::before
+					width: 15px
+					height: 15px
+					border: 1px solid #fff
+					border-radius: 3px
+
+				&::after
+					width: 11px
+					height: 11px
+					left: 2px
+					top: 2px
+					background-color: #fff
+					border-radius: 3px
+					opacity: 0
+
+			input[type="checkbox"]
+				display: none
+
+			input[type="checkbox"]:checked + label::after
+				opacity: 1
+
+
+			span
+				position: absolute
+				top: 0
+				left: 15px
+				height: 15px
+				width: 10px
+				background-color: $accent
+
+				&::before
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 1px
+					border-bottom: 4px solid #082e70
+					border-left: 4px solid transparent
+					border-right: 4px solid transparent
+					border-top: 4px solid transparent
+
+		a
+			color: #fff
+
+	h2
+		color: #fff
+		text-align: right
+		margin-bottom: 70px
+
+	input
+		background-color: transparent
+		border-color: #fff
+		border-radius: 5px
+		width: 100%
+		font-size: 14px
+		height: 40px
+		line-height: 40px
+		padding: 0 30px
+		color: #fff
+
+		&::placeholder
+			color: #fff
+			line-height: 1
+			font-size: 14px

@@ -1,6 +1,52 @@
+//--------------------------heght----------------------------
+
+
+@media only screen and (max-height : 800px)
+	.checked
+		.main
+			height: auto
+
+		.footer
+			position: relative
+			justify-content: center
+
+
+//--------------------------wight----------------------------
+@media only screen and (max-width : 1500px)
+	.information
+		&__form_line
+			span
+				top: 50%
+				transform: translate(0, -50%)
+				z-index: 1
+
+				span
+					top: 30px
+					right: 50px
+					z-index: 1
+
+					&::before, &::after
+						content: ''
+						left: auto
+						right: -30px
+						transform: rotate(180deg)
+
 
 @media only screen and (max-width : 1200px)
-	
+		
+	.information
+		&__tab
+			ul
+				margin-bottom: 40px
+
+			span, a
+				font-size: 14px
+				z-index: 1
+
+		
+		label
+			text-align: left
+
 	.nav
 		li
 			margin-right: 35px
@@ -35,6 +81,12 @@
 
 
 @media only screen and (max-width : 992px)
+
+
+	.profile
+		&__tab
+			padding-top: 75px
+
 	.page--sell
 		.main
 			padding-top: 150px
@@ -83,7 +135,55 @@
 		.main
 			padding: 150px 0
 
+
 @media only screen and (max-width : 767px)
+	.reviews-page__form_block
+		width: 63%
+		
+	.information
+		
+		&__wrap
+
+		&__form label
+			width: 50%
+			padding-right: 15px
+
+
+	.profile
+		&__section
+			h3
+				margin-bottom: 30px
+
+			&_img
+				width: 170px
+				margin: 0 auto 30px
+
+			&_info
+				margin-bottom: 30px
+
+	.reviews-page
+
+		h2
+			margin-bottom: 40px
+
+		&__form
+			width: 100%
+			
+		.reviews
+			padding-top: 60px
+
+			&__item
+				width: 100%
+				margin-bottom: 40px
+
+
+	.checked
+		.main
+			font-size: 16px
+
+			br
+				display: none
+
 	h1
 		font-size: 40px
 		margin-bottom: 40px
@@ -127,13 +227,14 @@
 
 
 @media only screen and (max-width : 576px)
+
+
 	.contacts
 		&-top
 			padding: 40px 0
 			&__item
 				width: 100%
 				margin-bottom: 30px
-
 	
 	.page--form
 		.main
@@ -157,6 +258,47 @@
 
 
 @media only screen and (max-width : 480px)
+	.information
+		&__tab
+			span, a
+				font-size: 12px
+
+	.profile
+		&__tab
+
+			.btn__blue--active
+				padding: 0 30px
+
+			&_name
+				margin-right: 85px
+				padding-left: 5px
+
+			li
+				padding-right: 85px
+				padding-left: 5px
+				font-size: 12px
+
+				span
+					&:first-child
+						width: 7%
+
+				.btn__blue--active
+					max-width: 70px
+
+	.reviews-page
+		&__form
+			flex-wrap: wrap
+
+			&_block
+				width: 100%
+				margin-bottom: 20px !important
+
+				&:last-child
+					width: 100%
+
+			&_line
+				margin-bottom: 20px
+
 	h1
 		font-size: 34px
 
