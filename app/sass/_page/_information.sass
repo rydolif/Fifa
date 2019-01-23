@@ -12,6 +12,9 @@
 	
 	.profile__tab_name span
 		width: 45%
+
+	.profile__tab_list
+		margin-bottom: 30px
 		
 .information
 
@@ -43,6 +46,62 @@
 			margin-left: 25%
 			font-size: 14px
 			margin-bottom: 20px
+			position: relative
+			display: flex
+			z-index: 20
+			
+			span
+				position: relative
+				height: 30px
+				width: 30px
+				display: flex
+				align-items: center
+				justify-content: center
+				background: $text
+				color: #fff
+				font-weight: 800
+				line-height: 1
+				border-radius: 4px
+				cursor: pointer
+				margin-left: 10px
+
+				&:hover
+					span
+						display: block
+
+				span
+					display: none
+					position: absolute
+					top: -10px
+					right: -250px
+					width: 230px
+					height: auto
+					background: #fff
+					border: 1px solid $text
+					color: $text
+					font-size: 12px
+					padding: 10px
+					cursor: pointer
+
+					&::before
+						content: ''
+						position: absolute
+						left: -30px
+						border-bottom: 15px solid transparent
+						border-left: 15px solid transparent
+						border-right: 15px solid $text
+						border-top: 15px solid transparent
+
+					&::after
+						content: ''
+						position: absolute
+						top: 10px
+						left: -29px
+						border-bottom: 15px solid transparent
+						border-left: 15px solid transparent
+						border-right: 15px solid #fff
+						border-top: 15px solid transparent
+						z-index: 1
 
 
 	&__form
